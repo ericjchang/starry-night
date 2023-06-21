@@ -14,13 +14,13 @@ function Map() {
   const config = {
     container: 'map',
     width: 700,
-    form: true,
+    form: false,
     advanced: false,
     controls: false,
-    interactive: true,
+    interactive: false,
     disableAnimations: false,
 
-    zoomlevel: 0.9,
+    zoomlevel: null,
     zoomextend: 1,
 
     projection: 'airy',
@@ -33,7 +33,12 @@ function Map() {
       supergalactic: { show: false },
     },
     datapath: 'https://ofrohn.github.io/data/',
+
     planets: {
+      show: false,
+    },
+
+    mw: {
       show: false,
     },
 
@@ -44,12 +49,8 @@ function Map() {
 
     constellations: {
       names: false,
-      lines: true, // Show constellation lines, style below
+      lines: true,
       lineStyle: { stroke: '#cccccc', width: 1, opacity: 0.6 },
-    },
-
-    mw: {
-      show: false,
     },
 
     background: {
@@ -90,14 +91,14 @@ function Map() {
 
   return (
     <div>
-      <p>Date : {date.toString()}</p>
+      {/* <p>Date : {date.toString()}</p>
       <p>Lat : {location.lat}</p>
-      <p>Long : {location.long}</p>
+      <p>Long : {location.long}</p> */}
       <div id='map-container'>
         <div id='map'></div>
       </div>
-      <div id='celestial-form'></div>
-      <button onClick={changeLocation}>Change</button>
+      {/* <div id='celestial-form'></div> */}
+      {/* <button onClick={changeLocation}>Change</button> */}
     </div>
   );
 }
