@@ -1,13 +1,19 @@
+import React from 'react';
+import Map from './components/Map';
+import Editor from './components/Editor';
+import { Provider } from 'react-redux';
+
+import store from './store';
+
 import './App.css';
-import Map from './Components/Map';
-import Editor from './Components/Editor/';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className='App'>
+    <Provider store={store}>
       <Map />
       <Editor />
-    </div>
+    </Provider>
   );
 }
 

@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import celestial from 'd3-celestial';
 
 const Celestial = celestial.Celestial();
 window.Celestial = Celestial;
 
 function Map() {
-  const [date, setDate] = useState(new Date());
-  const [location, setLocation] = useState({
-    lat: 0,
-    long: 0,
-  });
+  const [date] = useState(new Date());
+  const long = useSelector(state => state.LocationReducer.long);
+  const lat = useSelector(state => state.LocationReducer.lat);
 
   const config = {
     container: 'map',
-    width: 700,
+    width: 450,
     form: false,
     advanced: false,
     controls: false,
@@ -76,29 +75,19 @@ function Map() {
   }, []);
 
   useEffect(() => {
-    Celestial.skyview({ date: date, location: { lat: location.lat, long: location.long } });
-    console.log(location, date);
-  }, [date, location]);
-
-  const changeLocation = () => {
-    const d = new Date('14 April 2022 00:00:00 GMT');
-    setDate(d);
-    setLocation({
-      lat: 52.520008,
-      long: 13.404954,
-    });
-  };
+    try {
+      Celestial.skyview({ date: date, location: [lat, long] });
+    } catch (err) {
+      console.log(err);
+    }
+    console.log(long, lat, date);
+  }, [date, long, lat]);
 
   return (
     <div>
-      {/* <p>Date : {date.toString()}</p>
-      <p>Lat : {location.lat}</p>
-      <p>Long : {location.long}</p> */}
       <div id='map-container'>
         <div id='map'></div>
       </div>
-      {/* <div id='celestial-form'></div> */}
-      {/* <button onClick={changeLocation}>Change</button> */}
     </div>
   );
 }
