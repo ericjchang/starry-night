@@ -11,10 +11,11 @@ function Map() {
   const year = useSelector(state => state.DateReducer.year);
   const long = useSelector(state => state.LocationReducer.long);
   const lat = useSelector(state => state.LocationReducer.lat);
+  const color = useSelector(state => state.DesignReducer.color);
 
   const config = {
     container: 'map',
-    width: 450,
+    width: 500,
     form: false,
     advanced: false,
     controls: false,
@@ -55,7 +56,7 @@ function Map() {
     },
 
     background: {
-      fill: '#000',
+      fill: color,
       stroke: '#ffffff',
       opacity: 1,
       width: 2,
@@ -74,6 +75,14 @@ function Map() {
   useEffect(() => {
     Celestial.display(config);
   }, []);
+
+  useEffect(() => {
+    Celestial.apply({
+      background: {
+        fill: color,
+      },
+    });
+  }, [color]);
 
   useEffect(() => {
     const date = new Date(year, month - 1, day);

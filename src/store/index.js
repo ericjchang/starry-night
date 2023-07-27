@@ -2,10 +2,12 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import LocationReducer from './reducers/LocationReducer';
+import DesignReducer from './reducers/DesignReducer';
 import DateReducer from './reducers/DateReducer';
 
 const reducers = combineReducers({
   LocationReducer,
+  DesignReducer,
   DateReducer,
 });
 
