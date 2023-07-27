@@ -65,7 +65,7 @@ function Map() {
     stars: {
       colors: false,
       size: 6,
-      limit: 8,
+      limit: 5,
       exponent: -0.28,
       designation: false,
       propername: false,
