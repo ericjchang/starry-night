@@ -2,9 +2,11 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import LocationReducer from './reducers/LocationReducer';
+import DateReducer from './reducers/DateReducer';
 
 const reducers = combineReducers({
   LocationReducer,
+  DateReducer,
 });
 
 const store = createStore(

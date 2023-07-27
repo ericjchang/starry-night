@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import celestial from 'd3-celestial';
 
@@ -6,7 +6,9 @@ const Celestial = celestial.Celestial();
 window.Celestial = Celestial;
 
 function Map() {
-  const [date] = useState(new Date());
+  const day = useSelector(state => state.DateReducer.day);
+  const month = useSelector(state => state.DateReducer.month);
+  const year = useSelector(state => state.DateReducer.year);
   const long = useSelector(state => state.LocationReducer.long);
   const lat = useSelector(state => state.LocationReducer.lat);
 
@@ -70,18 +72,19 @@ function Map() {
   };
 
   useEffect(() => {
-    console.log('run');
     Celestial.display(config);
   }, []);
 
   useEffect(() => {
+    const date = new Date(year, month - 1, day);
+
     try {
       Celestial.skyview({ date: date, location: [lat, long] });
     } catch (err) {
       console.log(err);
     }
     console.log(long, lat, date);
-  }, [date, long, lat]);
+  }, [long, lat, year, month, day]);
 
   return (
     <div>
