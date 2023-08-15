@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateColor } from '../../../store/actions/DesignAction';
 
@@ -21,45 +22,36 @@ const ColorPicker = () => {
   };
 
   return (
-    <div>
-      <div className='d-flex'>
-        {colors.map((color, index) => (
-          <div
-            key={index}
-            className='color-box'
-            style={{
-              width: '30px',
-              height: '30px',
-              backgroundColor: color,
-              cursor: 'pointer',
-              marginRight: '10px',
-              marginBottom: '10px',
-              padding: '4px',
-              outline: `2px solid ${color === selectedColor || color === hoveredColor ? '#7785a9' : 'transparent'}`,
-              border: `1px solid ${color === selectedColor || color === hoveredColor ? 'white' : 'transparent'}`,
-              position: 'relative',
-            }}
-            onClick={() => handleColorClick(color)}
-            onMouseEnter={() => handleColorHover(color)}
-            onMouseLeave={handleColorLeave}
-          >
-            {color === selectedColor && (
-              <span
-                style={{
-                  position: 'absolute',
-                  fontSize: '18px',
-                  color: 'white',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                }}
-              >
-                &#10003;
-              </span>
-            )}
-          </div>
-        ))}
-      </div>
+    <div className='color-item'>
+      {colors.map((color, index) => (
+        <div
+          key={index}
+          className='color-box'
+          style={{
+            backgroundColor: color,
+            outline: `2px solid ${color === selectedColor || color === hoveredColor ? '#7785a9' : 'transparent'}`,
+            border: `1px solid ${color === selectedColor || color === hoveredColor ? 'white' : 'transparent'}`,
+          }}
+          onClick={() => handleColorClick(color)}
+          onMouseEnter={() => handleColorHover(color)}
+          onMouseLeave={handleColorLeave}
+        >
+          {color === selectedColor && (
+            <span
+              style={{
+                position: 'absolute',
+                fontSize: '25px',
+                color: 'white',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+            >
+              &#10003;
+            </span>
+          )}
+        </div>
+      ))}
     </div>
   );
 };

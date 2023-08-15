@@ -1,0 +1,12 @@
+.color-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.color-box {
+  width: calc(100% / 6 - 7px);
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  position: relative;
+}

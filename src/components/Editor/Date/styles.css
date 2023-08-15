@@ -1,0 +1,21 @@
+.date-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.date-picker select {
+  height: 35px;
+  width: calc(100% / 3 - 10px);
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  background-color: #f3f5f7;
+}
+
+/* .date-picker select:first-child {
+  margin-left: 0;
+} */

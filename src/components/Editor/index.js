@@ -8,16 +8,30 @@ import './styles.css';
 function Editor() {
   return (
     <div className='editor'>
-      <div>Editor</div>
-      <p>Location</p>
-      <Location />
-      <p>Dedication</p>
-      <Dedication />
-      <p>Date</p>
-      <Date />
-      <p>Design</p>
-      <Design />
-      <button>Generate PDF</button>
+      <h3>Editor</h3>
+      <div className='editor-item'>
+        <p>Location</p>
+        <Location />
+      </div>
+
+      <div className='editor-item'>
+        <p>Dedication</p>
+        <Dedication />
+      </div>
+
+      <div className='editor-item'>
+        <p>Date</p>
+        <Date />
+      </div>
+
+      <div className='editor-item'>
+        <p>Design</p>
+        <Design />
+      </div>
+
+      <div className='btn-generate'>
+        <button>Generate PDF</button>
+      </div>
     </div>
   );
 }

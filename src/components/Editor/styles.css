@@ -4,5 +4,43 @@
   right: 0;
   background-color: white;
   padding-left: 25px;
-  padding-right: 50px;
+  padding-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editor p {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.editor h3 {
+  margin-bottom: 50px;
+}
+
+.editor-item {
+  margin-bottom: 25px;
+}
+
+.btn-generate {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  margin-left: -25px;
+  padding-top: 20px;
+  border-top: 10px solid #f3f5f7;
+}
+
+.btn-generate button {
+  width: 85%;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
 }

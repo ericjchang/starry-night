@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
+import './styles.css';
 import { connect } from 'react-redux';
 import { updateDay, updateMonth, updateYear } from '../../../store/actions/DateAction';
 
 const DatePicker = ({ day, month, year, updateDay, updateMonth, updateYear }) => {
-  const daysInMonth = (month, year) => {
+  const daysInMonth = useCallback((month, year) => {
     if (parseInt(month) === 2) {
       return isLeapYear(parseInt(year)) ? 29 : 28;
     } else {
       return new Date(year, month, 0).getDate();
     }
-  };
+  }, []);
 
   const isLeapYear = year => {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
@@ -72,14 +73,7 @@ const DatePicker = ({ day, month, year, updateDay, updateMonth, updateYear }) =>
   const yearOptions = Array.from({ length: yearsFromNow + yearsAgo + 1 }, (_, i) => currentYear - yearsAgo + i);
 
   return (
-    <div>
-      <select name='day' value={day} onChange={handleInputChange}>
-        {Array.from({ length: daysInMonth(parseInt(month), parseInt(year)) }, (_, i) => i + 1).map(d => (
-          <option key={d} value={d}>
-            {d}
-          </option>
-        ))}
-      </select>
+    <div className='date-picker'>
       <select name='month' value={month} onChange={handleInputChange}>
         {months.map((m, index) => (
           <option key={index + 1} value={index + 1}>
@@ -87,6 +81,15 @@ const DatePicker = ({ day, month, year, updateDay, updateMonth, updateYear }) =>
           </option>
         ))}
       </select>
+
+      <select name='day' value={day} onChange={handleInputChange}>
+        {Array.from({ length: daysInMonth(parseInt(month), parseInt(year)) }, (_, i) => i + 1).map(d => (
+          <option key={d} value={d}>
+            {d}
+          </option>
+        ))}
+      </select>
+
       <select name='year' value={year} onChange={handleInputChange}>
         {yearOptions.map(y => (
           <option key={y} value={y}>
