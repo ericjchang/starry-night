@@ -1,7 +1,7 @@
 const defaultState = {
   long: 10,
   lat: 10,
-  name: '',
+  name: 'Sample Location',
 };
 
 const Location = (state = defaultState, action) => {
