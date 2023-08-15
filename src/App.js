@@ -16,6 +16,10 @@ function App() {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <Page>
           <Map />
+          <p className=''>dedication</p>
+          <p className=''>city</p>
+          <p className=''>coordinates</p>
+          <p className=''>date</p>
         </Page>
         <Editor />
       </Provider>

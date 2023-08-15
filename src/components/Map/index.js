@@ -92,7 +92,6 @@ function Map() {
     } catch (err) {
       console.log(err);
     }
-    console.log(long, lat, date);
   }, [long, lat, year, month, day]);
 
   return (

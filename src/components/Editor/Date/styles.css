@@ -8,7 +8,7 @@
 
 .date-picker select {
   height: 35px;
-  width: calc(100% / 3 - 10px);
+  width: calc(100% / 3 - 15px);
   padding-left: 10px;
   outline: none;
   border: none;
@@ -16,6 +16,6 @@
   background-color: #f3f5f7;
 }
 
-/* .date-picker select:first-child {
-  margin-left: 0;
-} */
+.date-picker select:first-child {
+  width: calc(100% / 3 + 10px);
+}
