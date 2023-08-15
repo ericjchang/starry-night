@@ -7,7 +7,7 @@ import './styles.css';
 
 function Editor() {
   return (
-    <div>
+    <div className='editor'>
       <div>Editor</div>
       <p>Location</p>
       <Location />

@@ -1,4 +1,5 @@
 import React from 'react';
+import Page from './components/Page';
 import Map from './components/Map';
 import Editor from './components/Editor';
 import { Provider } from 'react-redux';
@@ -10,10 +11,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Provider store={store}>
-      <Map />
-      <Editor />
-    </Provider>
+    <div className='container d-flex'>
+      <Provider store={store}>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <Page>
+          <Map />
+        </Page>
+        <Editor />
+      </Provider>
+    </div>
   );
 }
 
