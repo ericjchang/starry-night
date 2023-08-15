@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './styles.css';
 import { useSelector } from 'react-redux';
 import celestial from 'd3-celestial';
 

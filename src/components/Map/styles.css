@@ -1,0 +1,5 @@
+#map canvas {
+  width: calc(100vh * 0.707);
+  transform: scale(0.75);
+  aspect-ratio: 1/1;
+}

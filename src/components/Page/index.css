@@ -1,7 +1,6 @@
 .page {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.2);
   margin: 20px;
   overflow: hidden;
@@ -10,12 +9,7 @@
   height: 94vh;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3em;
   background-color: white;
-}
-
-.content {
-  padding: 2cm;
 }
 
 /* @media only screen and (orientation: portrait) {
