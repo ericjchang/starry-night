@@ -1,21 +1,11 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import './styles.css';
+import { months } from '../../../common/months';
+import { daysInMonth } from '../../../helpers/DateFormater';
 import { connect } from 'react-redux';
 import { updateDay, updateMonth, updateYear } from '../../../store/actions/DateAction';
 
 const DatePicker = ({ day, month, year, updateDay, updateMonth, updateYear }) => {
-  const daysInMonth = useCallback((month, year) => {
-    if (parseInt(month) === 2) {
-      return isLeapYear(parseInt(year)) ? 29 : 28;
-    } else {
-      return new Date(year, month, 0).getDate();
-    }
-  }, []);
-
-  const isLeapYear = year => {
-    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-  };
-
   useEffect(() => {
     const today = new Date();
     const currentYear = today.getFullYear();
@@ -50,25 +40,10 @@ const DatePicker = ({ day, month, year, updateDay, updateMonth, updateYear }) =>
     if (currentDay > maxDays) {
       updateDay(maxDays.toString());
     }
-  }, [day, month, year, updateDay, daysInMonth]);
+  }, [day, month, year, updateDay]);
 
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-
-  const yearsFromNow = 50;
-  const yearsAgo = 50;
+  const yearsFromNow = 25;
+  const yearsAgo = 55;
   const currentYear = new Date().getFullYear();
   const yearOptions = Array.from({ length: yearsFromNow + yearsAgo + 1 }, (_, i) => currentYear - yearsAgo + i);
 
