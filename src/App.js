@@ -7,10 +7,16 @@ import { connect } from 'react-redux';
 import { toDMS } from './helpers/CoordinateFormater';
 import { dateToString } from './helpers/DateFormater';
 
+import { ClickContext } from './hooks/Context';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App({ day, month, year, long, lat, city, dedication }) {
+  const generatePdf = () => {
+    console.log('click');
+  };
+
   return (
     <div className='container d-flex'>
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -25,7 +31,9 @@ function App({ day, month, year, long, lat, city, dedication }) {
           </div>
         </div>
       </Page>
-      <Editor />
+      <ClickContext.Provider value={generatePdf}>
+        <Editor />
+      </ClickContext.Provider>
     </div>
   );
 }

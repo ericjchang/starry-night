@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Location from './Location';
 import Dedication from './Dedication';
 import Date from './Date';
 import Design from './Design';
 import './styles.css';
 
+import { ClickContext } from '../../hooks/Context';
+
 function Editor() {
+  const handleGeneratePdf = useContext(ClickContext);
+
   return (
     <div className='editor'>
       <h3>Editor</h3>
@@ -30,7 +34,7 @@ function Editor() {
       </div>
 
       <div className='btn-generate'>
-        <button>Generate PDF</button>
+        <button onClick={handleGeneratePdf}>Generate PDF</button>
       </div>
     </div>
   );
