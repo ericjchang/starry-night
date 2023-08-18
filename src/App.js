@@ -44,7 +44,7 @@ function App({ day, month, year, long, lat, city, dedication }) {
             <div className='dedication-container'>
               <p className='title'>{dedication}</p>
               <p className='detail'>{city}</p>
-              <p className='detail'>{`${toDMS(lat, 'lat')} ${toDMS(long, 'lon')}`}</p>
+              <p className='detail'>{`${toDMS(lat, 'lat')} \u00A0 ${toDMS(long, 'lon')}`}</p>
               <p className='detail'>{dateToString(day, month, year)}</p>
             </div>
           </div>
