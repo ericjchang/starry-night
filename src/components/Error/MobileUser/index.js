@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.css';
-import logo from '../../../assets/logo.png';
+import logo from '../../../assets/logo.webp';
 
 function ErrorMobileUser() {
   return (
-    <div class='msg'>
+    <div className='msg'>
       <p>
         Ooops...
         <br />
