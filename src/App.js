@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import Paper from './components/Paper';
 import Map from './components/Map';
 import Editor from './components/Editor';
+import ErrorMobileUser from './components/Error/MobileUser';
 import html2canvas from 'html2canvas';
 
 import { connect } from 'react-redux';
 import { toDMS } from './helpers/CoordinateFormater';
 import { dateToString } from './helpers/DateFormater';
 import { jsPDF } from 'jspdf';
+
 import { isMobileDevice } from './helpers/DeviceUtils';
 
 import './App.css';
@@ -57,7 +59,7 @@ function App({ day, month, year, long, lat, city, dedication }) {
           <Editor generatePdf={generatePdf} loading={loading} />
         </>
       ) : (
-        <div>Ooops... The mobile version is still in progress. Please use the desktop version for now. Thanks!</div>
+        <ErrorMobileUser />
       )}
     </div>
   );
