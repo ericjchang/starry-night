@@ -1,4 +1,4 @@
-.page {
+.paper {
   display: flex;
   justify-content: center;
   /* box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.2); */
@@ -13,7 +13,7 @@
 }
 
 /* @media only screen and (orientation: portrait) {
-  .page {
+  .paper {
     transform: rotate(-90deg);
     transform-origin: left top;
     width: calc(100vw - 40px);
@@ -24,9 +24,9 @@
   }
 } */
 
-/* Adjust the page size based on the viewport width */
+/* Adjust the paper size based on the viewport width */
 @media print, screen and (max-width: 768px) {
-  .page {
+  .paper {
     width: calc(100vw - 40px);
     height: calc((100vw - 40px) * 1.414);
     padding: 1cm;

@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.css';
 
-const Page = ({ children }) => {
+const Paper = ({ children }) => {
   return (
-    <div className='page'>
+    <div className='paper'>
       <div>{children}</div>
     </div>
   );
 };
 
-export default Page;
+export default Paper;
