@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Starry Night
 
-## Available Scripts
+<img src="./src/assets/logo.webp" width="120" height="120" style="margin-top:-25px;">
 
-In the project directory, you can run:
+<div align="center">
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="react" />
+<img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
+<img src="https://img.shields.io/badge/d3%20celestial-000?style=for-the-badge&logo=exordo&logoColor=white" alt="d3-celestial" />
+<img src="https://img.shields.io/badge/Google%20Maps-4285F4?style=for-the-badge&logo=google-maps&logoColor=white" alt="redux" />
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="redux" />
+</div>
+<br/>
 
-### `npm start`
+Craft personalized star constellation map posters by specifying a date, location, and adding a dedication text. Starry-Night seamlessly combines various technologies to deliver a unique and interactive experience for stargazers and astronomy enthusiasts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Key Features
 
-### `npm test`
+- **Customized Constellation Maps:** Generate constellation maps tailored to your chosen date and location. Witness the stars as they appeared on any special night in your life.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Personalization:** Add a dedication text or message to make your starry creation truly unique. Perfect for commemorating special events or gifting to loved ones.
 
-### `npm run build`
+- **Print-Ready Posters:** Download high-resolution posters ready for printing, framing, or sharing on social media.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run Starry-Night locally or contribute to its development, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository:**
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/ericjchang/starry-night.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install Dependencies:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd starry-night
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start the Development Server:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+4. **Open the Application:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Visit `http://localhost:3000` in your web browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+1. **Input Date and Location:** On the Starry-Night homepage, provide a date and location for which you want to create a constellation map poster.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Add Dedication Text:** Optionally, enter a dedication text that will appear on your poster.
 
-### Analyzing the Bundle Size
+3. **Generate Poster:** Click the "Generate Poster" button to create your personalized starry map.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Explore and Download:** Interact with the constellation map, explore the night sky, and when you're satisfied, click "Download" to save your poster.
 
-### Making a Progressive Web App
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React](https://reactjs.org/)
+- [D3-Celestial](https://github.com/ofrohn/d3-celestial)
+- [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)
 
-### Advanced Configuration
+## About the Developer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Starry-Night is developed and maintained by [Eric J. Chang](https://github.com/ericjchang). Feel free to reach out with questions or feedback!
